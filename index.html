@@ -9,26 +9,44 @@
 <body>
   <main>
     <h1>期刊订阅列表</h1>
-    <ul id="journal-list"></ul>
+    <table id="journal-table">
+      <thead>
+        <tr>
+          <th>期刊名称</th>
+          <th>订阅链接</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- JS 会在这里填充行 -->
+      </tbody>
+    </table>
   </main>
 
   <script>
-    // 在这里定义所展示的期刊及其 ics 链接
+    // 定义期刊和对应的 .ics 链接
     const journals = [
       { name: 'Journal of Fluid Mechanics (JFM)', url: 'https://mosquitolegs.github.io/journal-ics/docs/jfm.ics' },
       { name: 'Nature',                       url: 'https://mosquitolegs.github.io/journal-ics/docs/nature.ics' },
       { name: 'Science',                      url: 'https://mosquitolegs.github.io/journal-ics/docs/Science.ics' },
     ];
 
-    const listEl = document.getElementById('journal-list');
+    const tbody = document.querySelector('#journal-table tbody');
     journals.forEach(j => {
-      const li = document.createElement('li');
-      const a  = document.createElement('a');
-      a.textContent = j.name;
-      a.href        = j.url;
-      a.target      = '_blank';
-      li.appendChild(a);
-      listEl.appendChild(li);
+      const tr = document.createElement('tr');
+
+      const tdName = document.createElement('td');
+      tdName.textContent = j.name;
+      tr.appendChild(tdName);
+
+      const tdLink = document.createElement('td');
+      const a = document.createElement('a');
+      a.href = j.url;
+      a.textContent = j.url;
+      a.target = '_blank';
+      tdLink.appendChild(a);
+      tr.appendChild(tdLink);
+
+      tbody.appendChild(tr);
     });
   </script>
 </body>
