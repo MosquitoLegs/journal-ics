@@ -11,24 +11,21 @@ h1 {
   margin-bottom: 1em;
 }
 
-/* 表格外层容器：在窄屏时可横向滚动 */
-.table-container {
-  overflow-x: auto;
-}
-
-/* 让表格宽度自适应内容，并水平居中 */
+/* 表格铺满可用宽度 */
 table {
-  margin: 0 auto 2em;
+  width: 100%;
   border-collapse: collapse;
-  width: auto;       /* 而非 100% */
-  table-layout: auto;
+  margin-bottom: 2em;
 }
 
 /* 表头 / 单元格 统一内边距 & 底部边框 */
 th, td {
   padding: 0.75em 1em;
   border-bottom: 1px solid #ddd;
-  white-space: nowrap;  /* 阻止单元格内文本自动换行 */
+  /* 允许内容换行 */
+  white-space: normal;
+  /* 支持长 URL 拆分换行 */
+  word-break: break-all;
 }
 
 /* 表头背景色 */
@@ -39,8 +36,10 @@ th {
 
 /* 链接样式 */
 a {
-  color: #0366d6;      /* 刚才指定的颜色 */
+  color: #0366d6;
   text-decoration: none;
+  /* 链接文字也可拆分换行 */
+  word-break: break-all;
 }
 a:hover {
   text-decoration: underline;
