@@ -11,27 +11,37 @@ h1 {
   margin-bottom: 1em;
 }
 
-/* 表格样式 */
+/* 表格外层容器：在窄屏时可横向滚动 */
+.table-container {
+  overflow-x: auto;
+}
+
+/* 让表格宽度自适应内容，并水平居中 */
 table {
-  width: 100%;
+  margin: 0 auto 2em;
   border-collapse: collapse;
+  width: auto;       /* 而非 100% */
+  table-layout: auto;
 }
 
+/* 表头 / 单元格 统一内边距 & 底部边框 */
 th, td {
-  padding: 0.75em;
+  padding: 0.75em 1em;
   border-bottom: 1px solid #ddd;
+  white-space: nowrap;  /* 阻止单元格内文本自动换行 */
 }
 
+/* 表头背景色 */
 th {
   text-align: left;
   background-color: #f9f9f9;
 }
 
+/* 链接样式 */
 a {
-  color: #0366d6;
+  color: #0366d6;      /* 刚才指定的颜色 */
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
