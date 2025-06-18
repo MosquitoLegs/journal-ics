@@ -1,0 +1,23 @@
+body {
+  max-width: 600px;
+  margin: 2em auto;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+h1 {
+  text-align: center;
+}
+ul#journal-list {
+  list-style: none;
+  padding: 0;
+}
+ul#journal-list li {
+  margin: 0.5em 0;
+}
+ul#journal-list a {
+  text-decoration: none;
+  color: #0366d6;
+}
+ul#journal-list a:hover {
+  text-decoration: underline;
+}
