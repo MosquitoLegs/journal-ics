@@ -9,17 +9,20 @@
 <body>
   <main>
     <h1>期刊订阅列表</h1>
-    <table id="journal-table">
-      <thead>
-        <tr>
-          <th>期刊名称</th>
-          <th>订阅链接</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- JS 会在这里填充行 -->
-      </tbody>
-    </table>
+    <!-- 新增：table-container 用于横向滚动容器 -->
+    <div class="table-container">
+      <table id="journal-table">
+        <thead>
+          <tr>
+            <th>期刊名称</th>
+            <th>订阅链接</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JS 动态填充 -->
+        </tbody>
+      </table>
+    </div>
   </main>
 
   <script>
