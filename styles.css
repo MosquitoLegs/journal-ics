@@ -3,21 +3,35 @@ body {
   margin: 2em auto;
   font-family: sans-serif;
   line-height: 1.6;
+  padding: 0 1em;
 }
+
 h1 {
   text-align: center;
+  margin-bottom: 1em;
 }
-ul#journal-list {
-  list-style: none;
-  padding: 0;
+
+/* 表格样式 */
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
-ul#journal-list li {
-  margin: 0.5em 0;
+
+th, td {
+  padding: 0.75em;
+  border-bottom: 1px solid #ddd;
 }
-ul#journal-list a {
-  text-decoration: none;
+
+th {
+  text-align: left;
+  background-color: #f9f9f9;
+}
+
+a {
   color: #0366d6;
+  text-decoration: none;
 }
-ul#journal-list a:hover {
+
+a:hover {
   text-decoration: underline;
 }
