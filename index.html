@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>期刊订阅列表</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <h1>期刊订阅列表</h1>
+    <ul id="journal-list"></ul>
+  </main>
+
+  <script>
+    // 在这里定义所展示的期刊及其 ics 链接
+    const journals = [
+      { name: 'Journal of Fluid Mechanics (JFM)', url: 'https://MosquitoLegs.github.com/journal-ics/docs/jfm.ics' },
+      { name: 'Nature',                       url: 'https://MosquitoLegs.github.com/journal-ics/docs/nature.ics' },
+      { name: 'Science',                      url: 'https://MosquitoLegs.github.com/journal-ics/docs/Science.ics' },
+    ];
+
+    const listEl = document.getElementById('journal-list');
+    journals.forEach(j => {
+      const li = document.createElement('li');
+      const a  = document.createElement('a');
+      a.textContent = j.name;
+      a.href        = j.url;
+      a.target      = '_blank';
+      li.appendChild(a);
+      listEl.appendChild(li);
+    });
+  </script>
+</body>
+</html>
